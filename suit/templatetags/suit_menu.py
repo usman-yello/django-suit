@@ -44,6 +44,8 @@ def get_menu(context, request):
 
     if not available_apps:
         logging.warn('Django Suit was unable to retrieve apps list for menu.')
+    else:
+        logging.warn("Django suit was able to retrieve apps list for menu")
 
     return MenuManager(available_apps, context, request)
 
